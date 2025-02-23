@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicurativo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 10px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 80px;
+        }
+
+        .header h1 {
+            font-size: 2vw;
+            min-width: 180px;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: -10px;
+            right: 100px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            flex: 1;
+        }
+
+        .search-box .material-icons {
+            cursor: pointer;
+            color: #ff5733;
+        }
+
+        .dropdown {
+            position: relative;
+            top: -5px;
+            right: -50px;
+        }
+
+        .dropdown button {
+            background: white;
+            color: #ff5733;
+            padding: 8px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            min-width: 130px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 150px;
+            z-index: 2;
+        }
+
+        .dropdown-content a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background: #ffd4c4;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .contador {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #ff5733;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .icono {
+            font-size: 24px;
+            margin-right: 10px;
+            
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .options {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .dropdown button {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+
+            .contador {
+                bottom: 15px;
+                right: 50%;
+                transform: translateX(50%);
+                font-size: 0.9rem;
+                padding: 10px 12px;
+            }
+
+            .search-box input {
+                width: 100px;
+            }
+
+            .material-icons, .icono {
+                color: red !important;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Medicurativo</h1>
+        <div class="options">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar un tema...">
+                <span class="material-icons">search</span>
+            </div>
+            <div class="dropdown">
+                <button><span class="material-icons"></span> Motivación</button>
+                <div class="dropdown-content">
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">flag</span> Metas</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">favorite</span> Amor</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Valores</button>
+                <div class="dropdown-content">
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">handshake</span> Respeto</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">diversity_1</span> Tolerancia</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">groups</span> Amistad</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">thumb_up</span> Confianza</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Humanidad</button>
+                <div class="dropdown-content">
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">public</span> Cultura</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">language</span> Costumbre</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">science</span> Conocimiento</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Educación</button>
+                <div class="dropdown-content">
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">family_restroom</span> Educación de Padres</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">apartment</span> Escuela</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">business</span> Colegio</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">school</span> Universidad</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Reflexiones</button>
+                <div class="dropdown-content">
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">self_improvement</span> De vida</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">attach_money</span> Económicas</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">people</span> Sociales</a>
+                    <a href="#"><span class="material-icons" style="color:#ff7e5f">computer</span> Tecnológicas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contador">
+        <span class="icono">⭐</span>
+        <span id="nivel"></span> <span id="puntos">0</span>
+    </div>
+    
+    <script>
+        let puntos = 0;
+        const nivelTexto = document.getElementById("nivel");
+        const puntosTexto = document.getElementById("puntos");
+        const icono = document.querySelector(".icono");
+
+        function actualizarNivel() {
+            if (puntos < 50) {
+                nivelTexto.textContent = "Principiante";
+                icono.textContent = "⭐";
+            } else if (puntos < 100) {
+                nivelTexto.textContent = "Intermedio";
+                icono.textContent = "🏆";
+            } else if (puntos < 200) {
+                nivelTexto.textContent = "Avanzado";
+                icono.textContent = "👑";
+            } else {
+                nivelTexto.textContent = "Experto";
+                icono.textContent = "⚡";
+            }
+        }
+    </script>
+</body>
+</html>
