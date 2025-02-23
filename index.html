@@ -14,7 +14,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #ffffff;
+            
         }
 
         .header {
@@ -25,7 +26,18 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+           
             height: 80px;
+        }
+        
+        .profile-img {
+            width: 50px;  /* Ajusta el tamaño según necesites */
+            height: 50px;
+            border-radius: 50%; /* Para que se vea redonda */
+            margin-left: -50px; /* Mueve la imagen más hacia la izquierda */
+            margin-right: -70px; /* Reduce el espacio entre la imagen y el texto */
+
+        
         }
 
         .header h1 {
@@ -34,6 +46,7 @@
         }
 
         .options {
+
             display: flex;
             align-items: center;
             gap: 10px;
@@ -49,6 +62,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             margin-top: -10px;
             right: 100px;
+            width: 270px;
         }
 
         .search-box input {
@@ -66,7 +80,7 @@
         .dropdown {
             position: relative;
             top: -5px;
-            right: -50px;
+            right: -40px;
         }
 
         .dropdown button {
@@ -164,11 +178,13 @@
                 color: red !important;
             }
             
+
+            
+            
         }
     </style>
-</head>
-<body>
     <div class="header">
+        <img src="perfil.png" alt="Perfil" class="profile-img">
         <h1>Medicurativo</h1>
         <div class="options">
             <div class="search-box">
@@ -219,12 +235,111 @@
             </div>
         </div>
     </div>
-
+    
     <div class="contador">
         <span class="icono">⭐</span>
         <span id="nivel"></span> <span id="puntos">0</span>
     </div>
     
+    <div class="historias-container">
+        <span class="material-icons historias-icon">menu_book</span>
+        <button class="ver-btn">Historias</button>
+    </div>
+
+    <div class="contenedor">
+        <span class="material-icons icono">psychology</span>
+        <button class="boton">Resiliencia</button>
+    </div>
+</body>
+</html>
+    
+    <style>
+        .bienvenida {
+            text-align: center;
+            margin-top: 50px;
+        }
+    
+        .bienvenida h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff7e5f;
+        }
+    
+        
+
+        .historias-icon {
+            font-size: 50px;
+            position: absolute;
+            top: 280px;
+            left: 674px;
+            color: rgba(255, 2, 2, 0.7);
+        }
+
+       
+
+
+        .historias-container {
+            width: 300px;
+            padding: 50px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 2px solid #ff7e5f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 550px;
+            margin-top: 160px;
+        }
+
+        
+
+        .ver-btn {
+            margin-top: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ff7e5f;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        .contenedor {
+            width: 300px;
+            padding: 33px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 2px solid #ff7e5f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            margin-left: 870px;
+            margin-top: -190px;
+        }
+
+        .icono {
+            font-size: 50px;
+            color: #ff7e5f;
+            margin-bottom: 15px;
+        }
+
+        .boton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ff7e5f;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    
+
     <script>
         let puntos = 0;
         const nivelTexto = document.getElementById("nivel");
